@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem">
+  <img src="{{jogador.imagem}}" class="card-img-top" alt="" />
+  <div class="card-body">
+    <h5 class="card-title">{{jogador.nome}}</h5>
+    <p class="card-text mb-0">Idade: {{jogador.idade}}</p>
+    <p class="card-text mb-0">Camisa: {{jogador.camisa}}</p>
+    <p class="card-text">Posição: {{jogador.posicao}}</p>
+    <a href="#" class="btn btn-primary w-100" (click)="escalar.emit()"
+      >Escalar</a
+    >
+  </div>
+</div>

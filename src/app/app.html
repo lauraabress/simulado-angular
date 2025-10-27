@@ -1,7 +1,46 @@
+<app-navbar></app-navbar>
+
 <div class="container">
-  <img src="catjam.avif" alt="">
-  <img src="hackermans.avif" alt="">
-  <img src="4x.avif" alt="">
+  <div class="row">
+    <div class="col-9">
+      <!-- Lista de Jogadores -->
+      <div class="row">
+        @for (jogador of Jogadores; track $index) {
+        <div class="col mt-5">
+          <app-cards [jogador]="jogador" (escalar)="escalarTime($index)">
+          </app-cards>
+        </div>
+        }
+      </div>
+    </div>
+    <div class="col-3">
+      <!-- Jodadores Escalados -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Jogador</th>
+            <th scope="col">Posição</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (jogador of timeEscalado; track $index) {
+          <tr>
+            <td>{{jogador.nome}}</td>
+            <td>{{jogador.posicao}}</td>
+            <button (click)="devolverJogador($index)">
+              <i class="bi bi-trash3-fill"></i>
+            </button>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <img src="catjam.avif" alt="" />
+  <img src="hackermans.avif" alt="" />
+  <img src="4x.avif" alt="" />
 </div>
 
 <router-outlet />

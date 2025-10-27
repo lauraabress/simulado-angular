@@ -1,0 +1,106 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">Escalação de Jogadores</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sobre nós</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Inscreva-se</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Barra de Pesquisa -->
+<div class="container">
+  <form class="mt-4 d-flex" role="search">
+    <input
+      class="form-control me-2"
+      type="search"
+      placeholder="Pesquise por Jogadores"
+      aria-label="Search"
+    />
+    <button class="btn btn-outline-success" type="submit">Buscar</button>
+  </form>
+
+  <!-- Filtros -->
+  <div
+    class="filtros d-flex mt-2 justify-content-center bg-dark p-2"
+    style="color: aliceblue"
+  >
+    <div class="form-check me-3">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="filtro-goleiro"
+        style="cursor: pointer"
+        (click)="filtrar()"
+      />
+      <label class="form-check-label" for="checkDefault"> GOLEIRO </label>
+    </div>
+    <div class="form-check me-3">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="filtro-atacante"
+        style="cursor: pointer"
+      />
+      <label class="form-check-label" for="checkChecked"> ATACANTE </label>
+    </div>
+
+    <div class="form-check me-3">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="filtro-lateral"
+        style="cursor: pointer"
+      />
+      <label class="form-check-label" for="checkDefault"> LATERAL </label>
+    </div>
+
+    <div class="form-check me-3">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="filtro-meio"
+        style="cursor: pointer"
+      />
+      <label class="form-check-label" for="checkDefault"> MEIO </label>
+    </div>
+
+    <div class="form-check me-3">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="filtro-zagueiro"
+        style="cursor: pointer"
+      />
+      <label class="form-check-label" for="checkDefault"> ZAGUEIRO </label>
+    </div>
+  </div>
+</div>
